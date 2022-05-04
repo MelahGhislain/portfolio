@@ -1,5 +1,6 @@
 import {About, Footer, Header, Skills, Testimonials, Work} from './pages'
 import {NavBar, SocialMedia} from './components'
+import Overlay from './components/Overlay';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Testimonials />
       <Footer />
       <SocialMedia />
+      <Overlay />
     </div>
   );
 }

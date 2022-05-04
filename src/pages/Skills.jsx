@@ -40,33 +40,36 @@ const color = "rgba(241, 245, 249, .3)"
 const skillData = [
   {name: "html", icon: images.html, bgColor: color},
   {name: "css", icon: images.css, bgColor: color},
-  {name: "javascript", icon: images.javascript, bgColor: color},
-  {name: "typescript", icon: images.typescript, bgColor: color},
+  {name: "js", icon: images.javascript, bgColor: color},
+  {name: "node", icon: images.node, bgColor: color},
   {name: "react", icon: images.react, bgColor: color},
   {name: "flutter", icon: images.flutter, bgColor: color},
-  {name: "node", icon: images.node, bgColor: color},
+  {name: "python", icon: images.python, bgColor: color},
+  {name: "redux", icon: images.redux, bgColor: color},
+  {name: "sass", icon: images.sass, bgColor: color},
+  {name: "ts", icon: images.typescript, bgColor: color},
   {name: "git", icon: images.git, bgColor: color},
-  {name: "material ui", icon: images.mu5, bgColor: color},
+  {name: "mu5", icon: images.mu5, bgColor: color},
 ]
 const Skills = () => {
   const [experinces, setExperinces] = useState(dataExperince)
   const [skills, setSkills] = useState(skillData)
 
   return (
-    <div className='pt-[9rem] min-h-screen flex-1 w-full flex justify-center items-center flex-col'>
+    <div className='pt-[9rem] min-h-screen flex-1 w-full flex justify-center items-center flex-col '>
     <h2 classNames='text-center '>Skills & Experience</h2>
     <div className='mt-12 flex justify-center items-start flex-col w-[100%] md:flex-row md:w-[80%]'>
       <motion.div
-      className='flex-1 flex flex-wrap justify-start items-start mr-0 md:justify-start md:items-start md:mr-20'//app_skill-list
+      className='flex-1 flex flex-wrap justify-start items-start mr-0 md:justify-start md:items-start md:mr-20 '//app_skill-list
       >
         {skills.map(skill=>(
           <motion.div
           whileInView={{opacity: [0,1]}}
           transition={{duration: 0.5}}
-          className='flex justify-center items-center flex-col m-4 transition duration-300 easeInOut px-8 md:px-0'//app_skill list item
+          className='flex justify-center items-center flex-col m-4 transition duration-300 easeInOut px-8 md:px-0 '//app_skill list item
           key={skill.name}
           >
-            <div className={`flex justify-center items-center bg-white w-[70px] h-[70px] md:w-[90px] md:h-[90px] rounded-[50%]
+            <div className={`flex justify-center items-center bg-white w-[60px] h-[60px] md:w-[70px] md:h-[70px] rounded-[50%] 
             hover:shadow-lg shadow-white`} style={{backgroundColor: `${skill.bgColor}`}}>
               <img src={skill.icon} alt={skill.name} className='w-1/2 h-1/2' />
             </div>

@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 // import {client} from '../client'
 import {AppWrap, MotionWrap} from '../Wrapper'
 import {images} from '../constants'
+import {FaEnvelope, FaPhone} from 'react-icons/fa'
 
 const Footer = () => {
   const [formData, setFormData] = useState({name:"", email:"", message:""})
@@ -32,15 +33,15 @@ const Footer = () => {
   }
   return (
     <div className='pt-[9rem] min-h-screen w-screen flex justify-center items-center flex-col'>
-      <h2 className=''>Take a coffee & chat with me</h2>
+      <h2 className='text-center mb-8'>Take a coffee & chat with me</h2>
       <div className='flex justify-center items-center flex-col md:flex-row w-full py-4 px-12 md:px-8'>
-        <div className='w-full md:self-start flex-1 h-full'>
+        <div className='w-full md:self-start flex-1 h-full '>
           <div className='card '>
-            <img src={images.email} alt="email" />
+            <FaEnvelope className='mr-4 text-lg'/>
             <a href="mailto:melahghislain17@gmail.com" className=''>melahghislain17@gmail.com</a>
           </div>
           <div className='card '>
-            <img src={images.mobile} alt="mobile" />
+            <FaPhone className='mr-4 text-lg'/>
             <a href="tell:675909367" className=''>(+237) 675909367</a>
           </div>
         </div>

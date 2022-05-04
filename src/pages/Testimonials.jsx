@@ -1,23 +1,25 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import {motion} from 'framer-motion'
 import {AppWrap, MotionWrap} from '../Wrapper'
 import {images} from '../constants'
-import {ChevronLeftIcon, ChevronRightIcon} from '@heroicons/react/outline'
+import {FaChevronLeft, FaChevronRight} from 'react-icons/fa'
+import AppContext from '../AppContext/AppContext'
 const testimonialData = [
   {name: 'Ghislain', company: "Netflix", image: images.css, feedback:"Ghislain is an awsome developer Ghislain is an awsome developer Ghislain is an awsome developer Ghislain is an awsome developer"},
   {name: 'Ghislain', company: "Netflix", image: images.vue, feedback:"Ghislain is an awsome developer"},
   {name: 'Ghislain', company: "Netflix", image: images.python, feedback:"Ghislain is an awsome developer"},
 ]
 const brandData = [
-  {name: "New Balance", imageUrl: images.nb},
-  {name: "Spotify", imageUrl: images.spotify},
-  {name: "Skype", imageUrl: images.skype},
-  {name: "Bolt", imageUrl: images.bolt},
+  // {name: "New Balance", imageUrl: images.nb},
+  // {name: "Spotify", imageUrl: images.spotify},
+  // {name: "Skype", imageUrl: images.skype},
+  // {name: "Bolt", imageUrl: images.bolt},
 ]
 const Testimonials = () => {
   const [brands, setBrands] = useState(brandData)
   const [testimonials, setTestimonials] = useState(testimonialData)
   const [currentIndex, setCurrentIndex] = useState(0)
+  const {setHidden} = useContext(AppContext)
   const testimonial = testimonials[currentIndex]
 
   const handleClick=(index)=>{
@@ -25,10 +27,13 @@ const Testimonials = () => {
   }
 
   return (
-    <div className='pt-[6rem] min-h-screen w-screen flex justify-center items-center flex-col'>
+    <div className='pt-[6rem] min-h-screen w-screen flex justify-center items-center flex-col relative'>
+      <div onClick={()=>setHidden(false)} className='absolute top-4 right-4 bg-indigo-500 text-white px-4 py-2 rounded-md cursor-pointer transition-all duration-300 easeInOut hover:scale-90'>
+        Leave a Review
+      </div>
       {testimonials.length && (
         <>
-          <div className='flex-1 flex flex-col sm:flex-row justify-center items-center w-[80%] md:w-[60%] min-h-[320px] bg-white p-8 rounded-lg shadow-lg transition-all duration-300 easeInOut'>
+          <div className='flex-1 flex flex-col sm:flex-row justify-center items-center w-[90%] md:w-[60%] min-h-[320px] bg-white py-2 px-0 md:p-8 rounded-lg shadow-lg transition-all duration-300 easeInOut'>
             <img src={testimonial.image} alt="testimonial" className='w-[20%] h-full rounded-full object-cover mb-4 sm:mb-0' />
             <div className='flex-1 h-full py-0 px-8 text-left flex flex-col justify-around items-start sm:ml-5'>
               <p className='text-lg leading-8'>{testimonial.feedback}</p>
@@ -41,10 +46,10 @@ const Testimonials = () => {
 
           <div className='flex justify-center items-center mt-4'>
             <div className='btn' onClick={()=>handleClick(currentIndex === 0? testimonials.length-1 : currentIndex-1)}>
-                <ChevronLeftIcon className='text-indigo-600' height='25px'/>
+                <FaChevronLeft className='text-indigo-600 text-xl'/>
             </div>
             <div className='btn' onClick={()=>handleClick(currentIndex === testimonials.length-1 ? 0 : currentIndex+1)}>
-                <ChevronRightIcon className='text-indigo-600' height='25px'/>
+                <FaChevronRight className='text-indigo-600 text-xl'/>
             </div>
           </div>
         </>

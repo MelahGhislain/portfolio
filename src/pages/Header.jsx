@@ -17,7 +17,7 @@ const scaleVariants = {
 const Header = () => {
   return (
     <div className=" w-full h-full flex flex-col md:flex-row justify-center items-center relative 
-      bg-header-img bg-cover bg-repeat bg-center pt-24 px-8 ">
+      bg-header-img bg-cover bg-repeat bg-center pt-24 px-2 sm:px-8 ">
       <motion.div
       whileInView={{x: [-100,0], opacity:[0,1]}}
       transition={{duration:0.5}}
@@ -56,11 +56,11 @@ const Header = () => {
       <motion.div
         variant={scaleVariants}
         whileInView={scaleVariants.whileInView}
-        className='flex-initial flex w-full md:w-1/4 flex-row flex-wrap md:flex-col justify-evenly items-start h-full md:ml-4 techs '
+        className='flex-initial flex w-full md:w-1/4 flex-row flex-wrap md:flex-col justify-evenly items-start h-full md:ml-4 techs'
       >
-        {[images.flutter, images.redux, images.sass].map(circle=>(
+        {[images.react, images.node, images.flutter].map(circle=>(
           <div key={`circle_${circle}`} className='m-4 md:m-0 w-[100px] h-[100px] rounded-[50%] bg-white shadow-lg flex justify-center items-center'>
-            <img src={circle} alt="circle" className='w-[60%] h-[60%] h'/>
+            <img src={circle} alt="circle" className='w-[60%] h-[60%]'/>
           </div>
         ))}
       </motion.div>

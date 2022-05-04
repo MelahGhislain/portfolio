@@ -84,7 +84,7 @@ const Work = () => {
         className='flex flex-wrap justify-center  items-center w-full py-8 px-8 '
       >
         {filterWork.map((item, index)=>(
-          <WorkCard item={item} key={index}/>
+          <WorkCard item={item} key={item.title}/>
         ))}
       </motion.div>
           
