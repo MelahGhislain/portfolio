@@ -17,8 +17,8 @@ const WorkCard = ({item}) => {
                     <h4 className='self-start pt-2'>Stack</h4>
                     <marquee className='mt-2'>
                         <div className='flex space-x-1'>
-                            {item.tags.map(stack=>(
-                                <p className='border-2 px-2 rounded bg-white border-indigo-200'>{stack}</p>
+                            {item.tags.map((stack, index)=>(
+                                <p key={index} className='border-2 px-2 rounded bg-white border-indigo-200'>{stack}</p>
                             ))}
                         </div>
                     </marquee>
