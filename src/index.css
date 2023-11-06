@@ -1,81 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-h1{
-    @apply font-bold text-4xl md:text-5xl
-}
-h2{
-    @apply font-bold text-3xl md:text-4xl 
-}
-h3{
-    @apply font-bold text-2xl md:text-3xl 
-}
-h4{
-    @apply font-bold text-lg md:text-xl 
-}
-nav ul li:hover .dot{
-    @apply bg-indigo-500
-}
-.badge{
-    @apply py-4 px-8 rounded w-auto shadow-lg
-}
-.techs div:nth-child(1){
-    @apply w-[45px] h-[45px] sm:w-[70px] sm:h-[70px] md:w-[100px] md:h-[100px]
-}
-.techs div:nth-child(2){
-    @apply w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] m-7 md:w-[150px] md:h-[150px] 
-}
-.techs div:nth-child(3){ 
-    @apply w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] md:w-[70px] md:h-[70px]
-}
-.social{
-    @apply rounded-full bg-white p-2 flex items-center justify-center m-2 cursor-pointer shadow-lg
-    hover:bg-indigo-500 hover:transition-transform hover:scale-110 hover:text-white transition-all duration-700 ease-in-out
-}
-.btn{
-    @apply flex justify-center items-center rounded-full w-[50px] h-[50px] bg-white m-4 transition-all hover:bg-indigo-600
-}
-.btn:hover svg{
-    @apply text-white
-}
-.card{
-    @apply min-w-[290px] w-full sm:w-fit flex justify-start items-center p-4 px-0 md:px-4 rounded-sm cursor-pointer transition-all duration-300 ease-in-out
-    hover:shadow-lg 
-}
-
-.card a{
-    @apply font-medium
-}
-.work-card:hover{
-    transform: rotateY(180deg)
-}
-.preserve-3d{
-  transform-style: preserve-3d
-}
-.perspective{
-  perspective: 1000px
-}
-.backface-hidden{
-    backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.rotate-180{
-    transform: rotateY(180deg)
-}
-.input-wrapper{
-    @apply flex justify-center items-center w-full my-3 rounded-md cursor-pointer bg-neutral-300 
-    transition-all duration-300 ease-in-out
-}
-.input-overlay-wrapper{
-    @apply flex flex-col justify-center items-start px-4 w-full my-4 rounded-md 
-    transition-all duration-300 ease-in-out
-}
-.input, .textarea{
-    @apply w-full p-3 border-none rounded-md bg-[#f2f7fb] focus:outline-none hover:shadow-md
-}
-.textarea{
-    @apply h-[130px] md:h-[170px]
-    
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+body {
+  margin: 0;
+  font-family: "Raleway", serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
 }

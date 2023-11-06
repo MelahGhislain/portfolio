@@ -1,21 +1,50 @@
-import {About, Footer, Header, Skills, Testimonials, Work} from './pages'
-import {NavBar, SocialMedia} from './components'
-import Overlay from './components/Overlay';
-
+import React, { useState, useEffect } from "react";
+import Preloader from "../src/components/Pre";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Footer from "./components/Footer";
+import Resume from "./components/Resume/ResumeNew";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate
+} from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import "./style.css";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { RoutesLinks } from "./utils/constants";
 
 function App() {
+  const [load, upadateLoad] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      upadateLoad(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className='bg-slate-200'>
-      <NavBar />
-      <Header />
-      <About />
-      <Work />
-      <Skills />
-      <Testimonials />
-      <Footer />
-      <SocialMedia />
-      <Overlay />
-    </div>
+    <Router>
+      <Preloader load={load} />
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+        <Navbar />
+        <ScrollToTop />
+        <Routes>
+          <Route path={RoutesLinks.homePage} element={<Home />} />
+          <Route path={RoutesLinks.aboutPage} element={<About />} />
+          <Route path={RoutesLinks.projectPage} element={<Projects />} />
+          <Route path={RoutesLinks.resumePage} element={<Resume />} />
+          <Route path="*" element={<Navigate to={RoutesLinks.homePage}/>} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
