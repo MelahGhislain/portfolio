@@ -1,5 +1,5 @@
-import mondossier from "../../Assets/Projects/mondossier.png";
-import blackwalker from "../../Assets/Projects/blackwalker.png";
+import mondossier from "../../assets/Projects/mondossier.png";
+import blackwalker from "../../assets/Projects/blackwalker.png";
 
 export const ProjectData = [
     {
