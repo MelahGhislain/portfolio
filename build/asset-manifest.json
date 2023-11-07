@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.496cada7.css",
+    "main.js": "/static/js/main.41be5251.js",
+    "static/js/787.7da95b79.chunk.js": "/static/js/787.7da95b79.chunk.js",
+    "static/media/mondossier.png": "/static/media/mondossier.28cf12fc4a976bc4aeeb.png",
+    "static/media/blackwalker.png": "/static/media/blackwalker.3856a48f0e68dfbc17a2.png",
+    "static/media/home-main.svg": "/static/media/home-main.541f8179af8209ce03ccf2178fe62dbf.svg",
+    "static/media/about.png": "/static/media/about.aee0f771fbfc1e7b8fa8.png",
+    "static/media/Melah_Ghislain.pdf": "/static/media/Melah_Ghislain.a249f44ed19c11d27dfd.pdf",
+    "static/media/home-bg.jpg": "/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
+    "static/media/avatar.svg": "/static/media/avatar.5852f40fbb38aa284829fa3fb7722225.svg",
+    "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
+    "index.html": "/index.html",
+    "main.496cada7.css.map": "/static/css/main.496cada7.css.map",
+    "main.41be5251.js.map": "/static/js/main.41be5251.js.map",
+    "787.7da95b79.chunk.js.map": "/static/js/787.7da95b79.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.496cada7.css",
+    "static/js/main.41be5251.js"
+  ]
+}
